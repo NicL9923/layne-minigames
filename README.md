@@ -6,10 +6,10 @@ optional camera barcode scanning.
 
 ## Run locally
 
-Requires Node.js 22.12 or newer.
+Requires Node.js 24.22.2 or newer in the Node 24 line, or Node.js 26.13.0 or newer.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -36,3 +36,8 @@ No account, API, or backend is required.
 ## License
 
 [MIT](LICENSE)
+
+Type checking uses TypeScript 7 via `node node_modules/typescript7/bin/tsc`,
+while `typescript` remains on version 6 for typescript-eslint compatibility.
+Use `npm run typecheck` rather than relying on `node_modules/.bin/tsc`, which
+can refer to either installation.
